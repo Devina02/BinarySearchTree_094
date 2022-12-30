@@ -33,7 +33,7 @@ namespace BinarySearchTree_094
         public void insert(string element) /*Insert a node in the binary search tree*/
         {
             Node tmp, parent = null, currentNode = null;
-            Search(element, ref parent, ref currentNode);
+            search(element, ref parent, ref currentNode);
             if (currentNode != null) /*Check if the node to be inserted already inserted or no*/
             {
                 Console.WriteLine("Duplicate words not allowed");
@@ -68,6 +68,20 @@ namespace BinarySearchTree_094
                     currentnode = currentnode.leftchild;
                 else
                     currentnode = currentnode.rightchild;
+            }
+        }
+        public void inorder(Node ptr)
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                inorder(ptr.leftchild);
+                Console.Write(ptr.info + " ");
+                inorder(ptr.rightchild);
             }
         }
 
