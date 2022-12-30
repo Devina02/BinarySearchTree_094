@@ -135,6 +135,11 @@ namespace BinarySearchTree_094
                             x.insert(word);
                         }
                         break;
+                    case '2':
+                        {
+                            x.inorder(x.ROOT);
+                        }
+                        break;
                 }
             }
         }
