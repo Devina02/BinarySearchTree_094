@@ -20,6 +20,19 @@ namespace BinarySearchTree_094
             rightchild = r;
         }
     }
+    /* A node class consist os tree things, the information, reference to the right child, and reference to the left child */
+
+    class BinaryTree
+    {
+        public Node ROOT;
+        public BinaryTree()
+        {
+            ROOT = null; /*Initializing ROOTt to null*/
+            
+        }
+        
+    }
+
     internal class Program
     {
         static void Main(string[] args)
